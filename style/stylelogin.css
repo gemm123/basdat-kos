@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+    background: linear-gradient(#0099ff, #99d6ff);
+    height: 100%;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 25px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.68);
+    border-radius: 15px;
+}
+
+.container h1{
+    text-align: left;
+    color: black;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #0099ff;
+}
+
+.container label{
+    text-align: left;
+    color: black;
+}
+
+.container form input{
+    width: calc(100% - 20px);
+    padding: 1px 1px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #2979ff;
+    color: black;
+    font-size: 20px;
+}
+
+.container form button{
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    background-color:#2979ff;
+    font-size: 18px;
+    color: #fafafa;
+    border-radius: 5px;
+}

@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body{
+    background: linear-gradient(#0099ff, #99d6ff);
+    height: 100%;
+}
