@@ -12,10 +12,11 @@ $connection = getConnection();
 
 if(isset($_POST['update'])){
     $id = $_POST['id'];
-    $name = $_POST['name'];
+    $name = $_POST['nama'];
     $asalDaerah = $_POST['asal_daerah'];
+    $jenisKelamin = $_POST['jenis_kelamin'];
 
-    $sql = "UPDATE penghuni SET name='$name', asal_daerah='$asalDaerah' WHERE id=$id";
+    $sql = "UPDATE penghuni SET nama='$name', asal_daerah='$asalDaerah', jenis_kelamin='$jenisKelamin' WHERE id=$id";
     $statement = $connection->exec($sql);
 
     header('Location: penghuni.php');
@@ -27,8 +28,9 @@ $sql = "SElECT * FROM penghuni WHERE id=$id";
 $statement = $connection->query($sql);
 
 while($row = $statement->fetch()){
-    $name = $row['name'];
+    $nama = $row['nama'];
     $asalDaerah = $row['asal_daerah'];
+    $jenisKelamin = trim($row['jenis_kelamin']);
 }
 ?>
 
@@ -44,11 +46,16 @@ while($row = $statement->fetch()){
             <table border="0">
                 <tr>
                     <td>Name</td>
-                    <td><input type="text" name="name" value=<?= $name ?>></td>
+                    <td><input type="text" name="nama" value=<?= $nama ?>></td>
                 </tr>
                 <tr>
                     <td>Asal Daerah</td>
                     <td><input type="text" name="asal_daerah" value=<?= $asalDaerah?>></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td><input type="radio" name="jenis_kelamin" value="L" <?php if($jenisKelamin=="L")echo"checked"?>>Laki-laki</td>
+                    <td><input type="radio" name="jenis_kelamin" value="P" <?php if($jenisKelamin=="P")echo"checked"?>>Perempuan</td>
                 </tr>
                 <tr>
                     <td><input type="hidden" name="id" value=<?= $id ?>></td>
