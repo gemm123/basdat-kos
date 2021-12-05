@@ -7,3 +7,16 @@ html, body{
     background: linear-gradient(#0099ff, #99d6ff);
     height: 100%;
 }
+
+header h2{
+    float: left;
+}
+
+header a{
+    float:right
+}
+
+.main{
+    text-align: center;
+    padding-top: 100px;
+}
