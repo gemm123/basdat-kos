@@ -19,7 +19,7 @@ $statement = $connection->query($sql);
     <head>
         <meta charset="utf-8">
         <title>Tipe Kamar</title>
-        <link rel="stylesheet" href="/style/styletipekamar.css">
+        <link rel="stylesheet" href="/style/styleshowdata.css">
     </head>
     <body>
         <header>

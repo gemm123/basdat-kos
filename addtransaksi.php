@@ -30,33 +30,49 @@ if(isset($_POST['submit'])){
     <head>
         <meta charset="utf-8">
         <title>Tambah Data Transaksi</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/style/styleadding.css">
     </head>
     <body>
-        <form action="addtransaksi.php" method="post">
-            <table width="25%" border="0">
-                <tr>
-                    <td>Nomor Kamar</td>
-                    <td><input type="number" name="nomor_kamar"></td>
-                </tr>
-                <tr>
-                    <td>Id Penghuni</td>
-                    <td><input type="number" name="id"></td>
-                </tr>
-                <tr>
-                    <td>Tanggl Masuk</td>
-                    <td><input type="date" name="tanggal_masuk"></td>
-                </tr>
-                <tr>
-                    <td>Tanggal Keluar</td>
-                    <td><input type="date" name="tanggal_keluar"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Submit"></td>
-                    <td><a href="transaksi.php">Batal</a></td>
-                </tr>
-            </table>
-        </form>
+        <h1>Tambah Data Transaksi</h1>
+        <div class="container">
+            <form action="addkamar.php" method="post">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="nomorkamar">Nomor Kamar</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" name="nomor_kamar">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="idpenghuni">Id Penghuni</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" name="id">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="tanggalmasuk">Tanggal Masuk</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" name="tanggal_masuk">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="tanggalkeluar">Tanggal Keluar</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" name="tanggal_keluar">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" name="submit" value="Submit">
+                    <a class="batal" href="transaksi.php">Batal</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

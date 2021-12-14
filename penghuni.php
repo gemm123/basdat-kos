@@ -19,7 +19,7 @@ $statement = $connection->query($sql);
     <head>
         <meta charset="utf-8">
         <title>Data Penghuni</title>
-        <link rel="stylesheet" href="/style/stylepenghuni.css">
+        <link rel="stylesheet" href="/style/styleshowdata.css">
     </head>
     <body>
         <h1>Data Penghuni</h1>

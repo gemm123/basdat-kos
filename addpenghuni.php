@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     <head>
         <meta charset="utf-8">
         <title>Tambah Data Penghuni</title>
-        <link rel="stylesheet" href="/style/styleaddpenghuni.css">
+        <link rel="stylesheet" href="/style/styleadding.css">
     </head>
     <body>
         <h1>Tambah Data Penghuni</h1>
