@@ -23,12 +23,12 @@ $name = $_SESSION['username'];
         </header>
 
         <div class="main">
-            <h1>Menu Database</h1>
+            <h1>MENU DATABASE</h1>
             <ul>
-                <li><a href="/penghuni.php">Data Penghuni</a></li>
-                <li><a href="/tipekamar.php">Data Tipe Kamar</a></li>
-                <li><a href="/kamar.php">Data Kamar</a></li>
-                <li><a href="/transaksi.php">Data Transaksi</a></li>
+                <li><a class="a1" href="/penghuni.php">Data Penghuni</a></li>
+                <li><a class="a2" href="/tipekamar.php">Data Tipe Kamar</a></li>
+                <li><a class="a3" href="/kamar.php">Data Kamar</a></li>
+                <li><a class="a4" href="/transaksi.php">Data Transaksi</a></li>
             </ul>
         </div>
     </body>

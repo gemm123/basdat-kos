@@ -19,15 +19,15 @@ $statement = $connection->query($sql);
     <head>
         <meta charset="utf-8">
         <title>Data Penghuni</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/style/stylepenghuni.css">
     </head>
     <body>
         <h1>Data Penghuni</h1>
-        <a href="addpenghuni.php">Add</a>
-        <a href="dashboard.php">Menu</a>
+        <a class="add" href="addpenghuni.php">Add</a>
+        <a class="menu" href="dashboard.php">Menu</a>
         <br>
         <br>
-        <table border="1">
+        <table id="tabel">
             <tr>
                 <th>Id</th>
                 <th>Nama</th>
@@ -42,8 +42,8 @@ $statement = $connection->query($sql);
                     echo "<td>".$row['nama']."</td>";
                     echo "<td>".$row['asal_daerah']."</td>";
                     echo "<td>".$row['jenis_kelamin']."</td>";
-                    echo "<td><a href='editpenghuni.php?id=$row[id]'>Edit</a> | 
-                        <a href='deletepenghuni.php?id=$row[id]'>Delete</a></td>";
+                    echo "<td><a class='edit' href='editpenghuni.php?id=$row[id]'>Edit</a> | 
+                        <a class='delete' href='deletepenghuni.php?id=$row[id]'>Delete</a></td>";
                     echo "</tr>";
                 }
             ?>

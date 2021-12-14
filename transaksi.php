@@ -19,15 +19,15 @@ $statement = $connection->query($sql);
     <head>
         <meta charset="utf-8">
         <title>Data Transaksi</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/style/styletransaksi.css">
     </head>
     <body>
         <h1>Data Transaksi</h1>
-        <a href="addtransaksi.php">Add</a>
-        <a href="dashboard.php">Menu</a>
+        <a class="add" href="addtransaksi.php">Add</a>
+        <a class="menu" href="dashboard.php">Menu</a>
         <br>
         <br>
-        <table border="1">
+        <table id="tabel">
             <tr>
                 <th>Id Transaksi</th>
                 <th>Nomor Kamar</th>
@@ -44,8 +44,8 @@ $statement = $connection->query($sql);
                     echo "<td>".$row['id']."</td>";
                     echo "<td>".$row['tanggal_masuk']."</td>";
                     echo "<td>".$row['tanggal_keluar']."</td>";
-                    echo "<td><a href='edittransaksi.php?id_transaksi=$row[id_transaksi]'>Edit</a> | 
-                        <a href='deletetransaksi.php?id_transaksi=$row[id_transaksi]'>Delete</a></td>";
+                    echo "<td><a class='edit' href='edittransaksi.php?id_transaksi=$row[id_transaksi]'>Edit</a> | 
+                        <a class='delete' href='deletetransaksi.php?id_transaksi=$row[id_transaksi]'>Delete</a></td>";
                     echo "</tr>";
                 }
             ?>

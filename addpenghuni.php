@@ -28,30 +28,42 @@ if(isset($_POST['submit'])){
     <head>
         <meta charset="utf-8">
         <title>Tambah Data Penghuni</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/style/styleaddpenghuni.css">
     </head>
     <body>
-        <form action="addpenghuni.php" method="post">
-            <table width="25%" border="0">
-                <tr>
-                    <td>Nama</td>
-                    <td><input type="text" name="nama"></td>
-                </tr>
-                <tr>
-                    <td>Asal Daerah</td>
-                    <td><input type="text" name="asal_daerah"></td>
-                </tr>
-                <tr>
-                    <td>Jenis Kelamin</td>
-                    <td><p><input type="radio" name="jenis_kelamin" value="L">Laki-laki</p></td>
-                    <td><p><input type="radio" name="jenis_kelamin" value="P">Perempuan</p></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Submit"></td>
-                    <td><a href="penghuni.php">Batal</a></td>
-                </tr>
-            </table>
-        </form>
+        <h1>Tambah Data Penghuni</h1>
+        <div class="container">
+            <form action="addpenghuni.php" method="post">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="nama">Nama</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="nama">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="asaldaerah">Asal Daerah</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="asal_daerah">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="jeniskelamin">Jenis Kelamin</label>
+                    </div>
+                    <div class="col-75">
+                        <p><input type="radio" name="jenis_kelamin" value="L">Laki-laki</p>
+                        <p><input type="radio" name="jenis_kelamin" value="P">Perempuan</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" name="submit" value="Submit">
+                    <a class="batal" href="penghuni.php">Batal</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

@@ -19,7 +19,7 @@ $statement = $connection->query($sql);
     <head>
         <meta charset="utf-8">
         <title>Tipe Kamar</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/style/styletipekamar.css">
     </head>
     <body>
         <header>
@@ -28,11 +28,11 @@ $statement = $connection->query($sql);
 
         <div class="main">
             <h1>Data Tipe Kamar</h1>
-            <a href="/addtipekamar.php">Add</a>
-            <a href="/dashboard.php">Menu</a>
+            <a class="add" href="/addtipekamar.php">Add</a>
+            <a class="menu" href="/dashboard.php">Menu</a>
             <br>
             <br>
-            <table border="1">
+            <table id="tabel">
                 <tr>
                     <th>Tipe</th>
                     <th>Ukuran(M)</th>
@@ -49,8 +49,8 @@ $statement = $connection->query($sql);
                         echo "<td>".$row['fasilitas']."</td>";
                         echo "<td>".$row['jumlah_kamar']."</td>";
                         echo "<td>".$row['harga']."</td>";
-                        echo "<td><a href='edittipekamar.php?tipe=$row[tipe]'>Edit</a> | 
-                            <a href='deletetipekamar.php?tipe=$row[tipe]'>Delete</a></td>";
+                        echo "<td><a class='edit' href='edittipekamar.php?tipe=$row[tipe]'>Edit</a> | 
+                            <a class='delete' href='deletetipekamar.php?tipe=$row[tipe]'>Delete</a></td>";
                         echo "</tr>";
                     }
                 ?>
