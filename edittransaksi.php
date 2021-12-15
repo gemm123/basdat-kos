@@ -43,33 +43,50 @@ while($row = $statement->fetch()){
     <head>
         <meta charset="utf-8">
         <title>Edit Data Transaksi</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/style/styleadding.css">
     </head>
     <body>
-        <form action="edittransaksi.php" method="post">
-            <table border="0">
-                <tr>
-                    <td>Nomor Kamar</td>
-                    <td><input type="number" name="nomor_kamar" value=<?= $nomorKamar ?>></td>
-                </tr>
-                <tr>
-                    <td>Id Penghuni</td>
-                    <td><input type="number" name="id" value=<?= $id ?>></td>
-                </tr>
-                <tr>
-                    <td>Tanggl Masuk</td>
-                    <td><input type="date" name="tanggal_masuk" value=<?= $tanggalMasuk ?>></td>
-                </tr>
-                <tr>
-                    <td>Tanggal Keluar</td>
-                    <td><input type="date" name="tanggal_keluar" value=<?= $tanggalKeluar ?>></td>
-                </tr>
-                <tr>
-                    <td><input type="hidden" name="id_transaksi" value=<?= $idTransaksi ?>></td>
-                    <td><input type="submit" name="update" value="Update"></td>
-                    <td><a href="transaksi.php">Batal</a></td>
-                </tr>
-            </table>
-        </form>
+        <h1>Edit Data Transaksi</h1>
+        <div class="container">
+            <form action="edittransaksi.php" method="post">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="nomorkamar">Nomor Kamar</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" name="nomor_kamar" value=<?= $nomorKamar ?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="idpenghuni">Id Penghuni</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" name="id" value=<?= $id ?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="tanggalmasuk">Tanggal Masuk</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" name="tanggal_masuk" value=<?= $tanggalMasuk ?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="tanggalkeluar">Tanggal Keluar</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" name="tanggal_keluar" value=<?= $tanggalKeluar ?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="hidden" name="id_transaksi" value=<?= $idTransaksi ?>>
+                    <input type="submit" name="update" value="Submit">
+                    <a class="batal" href="transaksi.php">Batal</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
     <body>
         <h1>Tambah Data Transaksi</h1>
         <div class="container">
-            <form action="addkamar.php" method="post">
+            <form action="addtransaksi.php" method="post">
                 <div class="row">
                     <div class="col-25">
                         <label for="nomorkamar">Nomor Kamar</label>

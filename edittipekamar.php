@@ -42,40 +42,59 @@ while($row = $statement->fetch()){
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Edit Data Penghuni</title>
-        <link rel="stylesheet" href="">
+        <title>Edit Data Tipe Kamar</title>
+        <link rel="stylesheet" href="/style/styleadding.css">
     </head>
     <body>
-        <form action="edittipekamar.php" method="post">
-            <table border="0">
-            <tr>
-                    <td>Tipe</td>
-                    <td><input type="text" name="tipe" pattern="[A-Z]{1}"
-                        title="Hanya boleh 1 huruf" value=<?= $tipe ?>></td>
-                </tr>
-                <tr>
-                    <td>Ukuran(M)</td>
-                    <td><input type="text" name="ukuran" value=<?= $ukuran ?>></td>
-                </tr>
-                <tr>
-                    <td>Fasilitas</td>
-                    <td><textarea name="fasilitas"><?= $fasilitas ?></textarea></td>
-                </tr>
-                <tr>
-                    <td>Jumlah Kamar</td>
-                    <td><input type="number" name="jumlah_kamar" value=<?= $jumlahKamar ?>></td>
-                </tr>
-                <tr>
-                    <td>Harga</td>
-                    <td><input type="number" name="harga" value=<?= $harga ?>></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="update" value="Update"></td>
-                    <td><a href="tipekamar.php">Batal</a></td>
-                </tr>
-                </tr>
-            </table>
-        </form>
+        <h1>Edit Data Tipe Kamar</h1>
+        <div class="container">
+            <form action="edittipekamar.php" method="post">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="tipe">Tipe</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="tipe" pattern="[A-Z]{1}"
+                            title="Hanya boleh 1 huruf besar" value=<?= $tipe ?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="ukuran">Ukuran(M)</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="ukuran" value=<?= $ukuran ?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fasilitas">Fasilitas</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea name="fasilitas"><?= $fasilitas ?></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="jumlahkamar">Jumlah Kamar</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" name="jumlah_kamar" value=<?= $jumlahKamar ?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="harga">Harga</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" name="harga" value=<?= $harga ?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" name="update" value="Submit">
+                    <a class="batal" href="tipekamar.php">Batal</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

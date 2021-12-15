@@ -39,30 +39,43 @@ while($row = $statement->fetch()){
     <head>
         <meta charset="utf-8">
         <title>Edit Data Penghuni</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/style/styleadding.css">
     </head>
     <body>
-        <form action="editpenghuni.php" method="post">
-            <table border="0">
-                <tr>
-                    <td>Name</td>
-                    <td><input type="text" name="nama" value=<?= $nama ?>></td>
-                </tr>
-                <tr>
-                    <td>Asal Daerah</td>
-                    <td><input type="text" name="asal_daerah" value=<?= $asalDaerah?>></td>
-                </tr>
-                <tr>
-                    <td>Jenis Kelamin</td>
-                    <td><input type="radio" name="jenis_kelamin" value="L" <?php if($jenisKelamin=="L")echo"checked"?>>Laki-laki</td>
-                    <td><input type="radio" name="jenis_kelamin" value="P" <?php if($jenisKelamin=="P")echo"checked"?>>Perempuan</td>
-                </tr>
-                <tr>
-                    <td><input type="hidden" name="id" value=<?= $id ?>></td>
-                    <td><input type="submit" name="update" value="Update"></td>
-                    <td><a href="penghuni.php">Batal</a></td>
-                </tr>
-            </table>
-        </form>
+        <h1>Edit Data Penghuni</h1>
+        <div class="container">
+            <form action="editpenghuni.php" method="post">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="nama">Nama</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="nama" value=<?= $nama ?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="asaldaerah">Asal Daerah</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="asal_daerah" value=<?= $asalDaerah?>>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="jeniskelamin">Jenis Kelamin</label>
+                    </div>
+                    <div class="col-75">
+                        <p><input type="radio" name="jenis_kelamin" value="L" <?php if($jenisKelamin=="L")echo"checked"?>>Laki-laki</p>
+                        <p><input type="radio" name="jenis_kelamin" value="P" <?php if($jenisKelamin=="P")echo"checked"?>>Perempuan</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="hidden" name="id" value=<?= $id ?>>
+                    <input type="submit" name="update" value="Submit">
+                    <a class="batal" href="penghuni.php">Batal</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
