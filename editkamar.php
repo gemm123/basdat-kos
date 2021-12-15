@@ -16,8 +16,14 @@ if(isset($_POST['update'])){
     $tipe = $_POST['tipe'];
     $ketersediaan = $_POST['ketersediaan'];
 
-    $sql = "UPDATE kamar SET nomor_kamar=$nomorKamar, id=$id, tipe='$tipe', ketersediaan='$ketersediaan' 
+    if($id != null){
+        $sql = "UPDATE kamar SET nomor_kamar=$nomorKamar, id=$id, tipe='$tipe', ketersediaan='$ketersediaan' 
             WHERE nomor_kamar=$nomorKamar";
+    }else{
+        $sql = "UPDATE kamar SET nomor_kamar=$nomorKamar, id=null, tipe='$tipe', ketersediaan='$ketersediaan' 
+            WHERE nomor_kamar=$nomorKamar";
+    }
+
     $statement = $connection->exec($sql);
 
     header('Location: /kamar.php');

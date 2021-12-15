@@ -16,7 +16,12 @@ if(isset($_POST['submit'])){
 
     $connection = getConnection();
 
-    $sql = "INSERT INTO kamar(nomor_kamar, id, tipe, ketersediaan) VALUES($nomorKamar, $id, '$tipe', '$ketersediaan')";
+    if($id != null){
+        $sql = "INSERT INTO kamar(nomor_kamar, id, tipe, ketersediaan) VALUES($nomorKamar, $id, '$tipe', '$ketersediaan')";
+    }else{
+        $sql = "INSERT INTO kamar(nomor_kamar, tipe, ketersediaan) VALUES($nomorKamar, '$tipe', '$ketersediaan')";
+    }
+
     $connection->exec($sql);
 
     header('Location: /kamar.php');
