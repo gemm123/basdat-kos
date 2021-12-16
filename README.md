@@ -5,5 +5,5 @@
 </p>
 
 <p align="center">
-  <img src="images/dashboard.jpg width="600">
+  <img src="images/dashboard.jpg" width="600" >
 </p>
