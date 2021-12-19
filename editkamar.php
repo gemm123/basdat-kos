@@ -30,7 +30,6 @@ if(isset($_POST['update'])){
 }
 
 $nomorKamar = $_GET['nomor_kamar'];
-var_dump($nomorKamar);
 
 $sql = "SELECT * FROM kamar WHERE nomor_kamar=$nomorKamar";
 $statement = $connection->query($sql);
