@@ -2,6 +2,9 @@
 
 ## Anggota Kelompok
 
+Paralel: P2 <br>
+Kelompok: 3
+
 <table>
   <tr>
     <th>Nama</th>
