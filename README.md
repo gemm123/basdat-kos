@@ -41,3 +41,8 @@ ini dapat menjalankan pekerjaan mereka dengan lebih terstruktur.
 <p align="center">
   <img src="images/dashboard.jpg" width="600" >
 </p>
+
+>Halaman Data Kamar
+<p align="center">
+  <img src="images/datakamar.jpg" width="600" >
+</p>
